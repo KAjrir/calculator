@@ -132,21 +132,12 @@ buttons.addEventListener('click', (event) => {
     
 })
 
-// iterableButtons.forEach(button => console.log(button))
 
 
 document.addEventListener('keydown', (event) => {
     iterableButtons.forEach(button => {
-        if(button.classList.contains('number')){
-            if(event.key == button.textContent){
-                button.click()
-            }
-        }
-
-        if(button.classList.contains('operand')){
-            if(event.key == button.getAttribute('data-key')){
-                button.click()
-            }
+        if(event.key == button.textContent){
+            button.click()
         }
 
         if(button.textContent === '='){
